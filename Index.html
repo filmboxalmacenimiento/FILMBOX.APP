@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FilmBox - Descarga la App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Contenedor para la animación de fondo */
+    .background-slider {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    /* Imagen de fondo doble para el efecto de deslizamiento */
+    .background-slider .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%; /* doble ancho para el loop */
+      height: 100%;
+      background-image: url('https://i.postimg.cc/9XZG6dwC/Pluto-TV-comea-o-ano-estreando-trs-novos-canais.png');
+      background-repeat: repeat-x;
+      background-size: cover;
+      animation: slideBg 40s linear infinite;
+      filter: brightness(0.6);
+    }
+
+    @keyframes slideBg {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    header {
+      padding: 20px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      z-index: 10;
+      position: relative;
+    }
+    img.logo {
+      width: 120px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 10;
+    }
+    p.description {
+      max-width: 360px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.4;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 10;
+    }
+    a.download-btn {
+      display: inline-block;
+      background-color: #ff0000;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 35px;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 10px rgba(255,0,0,0.7);
+      transition: background-color 0.3s ease;
+      position: relative;
+      z-index: 10;
+    }
+    a.download-btn:hover {
+      background-color: #cc0000;
+      box-shadow: 0 6px 15px rgba(204,0,0,0.9);
+    }
+    footer {
+      margin-top: auto;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-slider">
+    <div class="slide"></div>
+  </div>
+
+  <header>FILMBOX</header>
+  <img class="logo" src="https://i.postimg.cc/4x7RTYxG/IMG-20250707-205946-131.webp" alt="FilmBox Logo" />
+  <p class="description">
+    ¡La mejor app para ver películas y series gratis!  
+    Rápida, ligera, sin anuncios y sin registro.
+  </p>
+  <a class="download-btn" href="https://www.mediafire.com/file/eu64acnw29zev6l/Filmbox-3.0.apk/file" download>
+    Descargar Última Versión
+  </a>
+  <footer>
+    © 2025 FilmBox - Todos los derechos reservados
+  </footer>
+</body>
+</html>
